@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8.6
+
+    steps:
+      - checkout
+      - run:
+          name: Install pip3 packages
+          command: pip3 install -r requirements.txt
+      - run:
+          name: Run tests and lint (pep-8)
+          command: |
+            flake8 --statistics
+            pytest -v
