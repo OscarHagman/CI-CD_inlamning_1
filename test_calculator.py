@@ -14,3 +14,8 @@ def test_sub():
 def test_mul():
     assert calc.mul(6, 6) == 36
     assert calc.mul(7, 8) == 56
+
+
+def test_div():
+    assert calc.div(10, 5) == 2
+    assert calc.div(10, 0) == "ERROR: Can't divide by zero"
