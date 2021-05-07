@@ -9,3 +9,8 @@ def test_add():
 def test_sub():
     assert calc.sub(10, 5) == 5
     assert calc.sub(25, 5) == 20
+
+
+def test_mul():
+    assert calc.mul(6, 6) == 36
+    assert calc.mul(7, 8) == 56
